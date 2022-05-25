@@ -27,8 +27,8 @@ var x = setInterval(function () {
   var counterText = document.getElementById('counterText');
   var counterTime = document.getElementById('counterTime');
 
-  counterText.innerHTML = 'Remaining time until the New Year: ';
-  counterTime.innerHTML = 'Remaining time until the New Year: ' + days + 'd: ' + hours + 's: ' + minutes + 'm: ' + seconds + 's ';
+  // counterText.innerHTML = 'Remaining time until the New Year: ';
+  // counterTime.innerHTML = days + 'd: ' + hours + 's: ' + minutes + 'm: ' + seconds + 's ';
 
   // If the countdown is over, write something
   // if (distance < 0) {
