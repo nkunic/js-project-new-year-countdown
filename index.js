@@ -1,40 +1,48 @@
-// Import stylesheets
-import './style.css';
+// Import stylesheets & scripts
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+import './css/style.css';
 
 // Write Javascript code!
 
-// Podesi datum
-var countDownDate = new Date('jan 1, 2020 0:0:0').getTime();
+// Set the date
+var countDownDate = new Date('jan 1, 2023 0:0:0').getTime();
 
-// Odbrojavanje
+// Countdown
 var x = setInterval(function () {
-  // Današnji datum
+
+  // Today's date
   var now = new Date().getTime();
 
-  // Razlika imedju današnjeg i traženog datuma
+  // The difference between today's and the requested date
   var distance = countDownDate - now;
 
-  // Kalkulacija za dane, sate, minute i sekunde
-  var dani = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var sati = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minuti = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var sekunde = Math.floor((distance % (1000 * 60)) / 1000);
+  // Calculation for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Prikazi rezultat u elementu id="brojac"
-  document.getElementById('brojac').innerHTML =
-    'Preostalo vreme do Nove godine: ' +
-    dani +
-    'd: ' +
-    sati +
-    's: ' +
-    minuti +
-    'm: ' +
-    sekunde +
-    's ';
+  // Show result in element id = "counterText" i id = "counterTime"
+  var counterText = document.getElementById('counterText');
+  var counterTime = document.getElementById('counterTime');
 
-  // Ako se završi odbrojavanje ispiši nešto
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById('brojac').innerHTML = 'Isteklo je vreme';
-  }
+  // counterText.innerHTML = 'Remaining time until the New Year: ';
+
+  // counterTime.innerHTML =
+  //   days +
+  //   'd: ' +
+  //   hours +
+  //   's: ' +
+  //   minutes +
+  //   'm: ' +
+  //   seconds +
+  //   's ';
+
+  // If the countdown is over, write something
+  // if (distance < 0) {
+  //   clearInterval(x);
+  //   counterText.innerHTML = 'Time is up';
+  // }
+
 }, 1000);
