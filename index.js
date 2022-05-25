@@ -29,6 +29,8 @@ var x = setInterval(function () {
 
   // counterText.innerHTML = 'Remaining time until the New Year: ';
   // counterTime.innerHTML = days + 'd: ' + hours + 's: ' + minutes + 'm: ' + seconds + 's ';
+  document.getElementById("counterText").innerHTML = "Preostalo vreme do Nove godine: " + days + "d: " + hours + "s: "
+  + minutes + "m: " + seconds + "s ";
 
   // If the countdown is over, write something
   // if (distance < 0) {
