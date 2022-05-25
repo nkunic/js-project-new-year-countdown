@@ -10,7 +10,6 @@ var countDownDate = new Date('jan 1, 2023 0:0:0').getTime();
 
 // Countdown
 var x = setInterval(function () {
-
   // Today's date
   var now = new Date().getTime();
 
@@ -27,15 +26,14 @@ var x = setInterval(function () {
   var counterText = document.getElementById('counterText');
   var counterTime = document.getElementById('counterTime');
 
-  // counterText.innerHTML = 'Remaining time until the New Year: ';
-  // counterTime.innerHTML = days + 'd: ' + hours + 's: ' + minutes + 'm: ' + seconds + 's ';
-  document.getElementById("counterText").innerHTML = "Preostalo vreme do Nove godine: " + days + "d: " + hours + "s: "
-  + minutes + "m: " + seconds + "s ";
+  counterText.innerHTML = 'Remaining time until the New Year: ';
+  counterTime.innerHTML =
+    days + 'd: ' + hours + 's: ' + minutes + 'm: ' + seconds + 's ';
 
   // If the countdown is over, write something
-  // if (distance < 0) {
-  //   clearInterval(x);
-  //   counterText.innerHTML = 'Time is up';
-  // }
+  if (distance < 0) {
+    clearInterval(x);
+    counterText.innerHTML = 'Time is up';
+  }
 
 }, 1000);
